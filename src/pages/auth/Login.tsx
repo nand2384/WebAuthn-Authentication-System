@@ -12,7 +12,7 @@ import { startAuthentication } from '@simplewebauthn/browser';
 import TopNav from '../../components/TopNav';
 
 export default function Login() {
-  const [email, setEmail] = useState('doctor@sarjan.com');
+  const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -68,7 +68,7 @@ export default function Login() {
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="w-full max-w-6xl bg-white md:rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-screen md:min-h-[700px]"
+          className="w-full max-w-6xl bg-white md:rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-screen md:min-h-175"
         >
           {/* Left Panel */}
           <div className="md:w-1/3 bg-primary-50 p-6 md:p-10 flex flex-col justify-between">
