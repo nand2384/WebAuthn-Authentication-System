@@ -5,6 +5,9 @@ import env from '../config/env';
 
 const pool = new Pool({
   connectionString: env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 async function migrate() {
