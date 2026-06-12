@@ -29,7 +29,8 @@ export const apiClient = async <T>(
   };
 
   try {
-    const response = await fetch(`http://localhost:3000${endpoint}`, config);
+    const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+    const response = await fetch(`${baseUrl}${endpoint}`, config);
 
     // If response body is empty or not JSON, handle gracefully
     const text = await response.text();
